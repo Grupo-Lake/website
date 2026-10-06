@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* LAKE FINANCE design system tokens (handoff: _ds/tokens/*.css) */
+@theme {
+  --breakpoint-nav: 61.3125rem; /* 981px — header switches to full nav (mockup: wide > 980) */
+
+  --color-ink-900: #0c1512;
+  --color-ink-800: #15201c;
+  --color-ink-700: #243029;
+  --color-ink-600: #3a4640;
+  --color-ink-500: #5a665f;
+  --color-ink-400: #7c887f;
+  --color-ink-300: #a7b0a8;
+  --color-ink-200: #cdd3cc;
+  --color-ink-100: #e6e9e4;
+  --color-ink-50: #f4f5f1;
+  --color-paper: #fbfbf7;
+  --color-white: #ffffff;
+
+  --color-lake-900: #06322b;
+  --color-lake-800: #083e35;
+  --color-lake-700: #0a4d43;
+  --color-lake-600: #0c6052;
+  --color-lake-500: #12806c;
+  --color-lake-400: #2ea189;
+  --color-lake-300: #7cc9b6;
+  --color-lake-200: #b0e0d2;
+  --color-lake-100: #d6efe7;
+  --color-lake-50: #edf7f3;
+
+  --color-coral-800: #a82e1a; /* texto sobre coral-100 (AA) */
+  --color-coral-700: #c5371f;
+  --color-coral-600: #e8442a;
+  --color-coral-500: #ff5a3c;
+  --color-coral-400: #ff7a60;
+  --color-coral-cta: #d13f27; /* fundo do CTA accent: branco 4,7:1 (WCAG AA); coral-500 dá só 3,1:1 */
+  --color-coral-200: #ffc4b6;
+  --color-coral-100: #ffe3dc;
+
+  --color-positive-600: #157a4e;
+  --color-positive-500: #1a8f5c;
+  --color-positive-100: #dbf1e5;
+  --color-negative-600: #be3322;
+  --color-negative-500: #d8412f;
+  --color-negative-100: #fbe0db;
+  --color-warning-600: #a66e08;
+  --color-warning-500: #c8870f;
+  --color-warning-100: #f8ebcf;
+  --color-info-600: #1f54ac;
+  --color-info-500: #2563c9;
+  --color-info-100: #dce7fa;
+
+  --color-strong: #0c1512;
+  --color-body: #243029;
+  --color-muted: #5d6961; /* ink-400 escurecido para WCAG AA em paper e sunken */
+  --color-on-dark: #edf1ec;
+  --color-on-dark-muted: #9db0a8;
+  --color-on-brand: #edf7f3;
+  --color-subtle: #e6e9e4; /* border-subtle */
+  --color-default: #cdd3cc; /* border-default */
+  --color-sunken: #f4f5f1;
+
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+
+  --shadow-xs: 0 1px 2px rgba(12, 21, 18, 0.06);
+  --shadow-sm: 0 2px 6px rgba(12, 21, 18, 0.07), 0 1px 2px rgba(12, 21, 18, 0.05);
+  --shadow-md: 0 8px 24px rgba(12, 21, 18, 0.08), 0 2px 6px rgba(12, 21, 18, 0.05);
+  --shadow-lg: 0 18px 48px rgba(12, 21, 18, 0.12), 0 6px 16px rgba(12, 21, 18, 0.06);
+  --shadow-xl: 0 32px 80px rgba(6, 50, 43, 0.2), 0 10px 28px rgba(12, 21, 18, 0.1);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-newsreader), "Iowan Old Style", Georgia, serif;
+  --font-sans: var(--font-hanken), -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, "SF Mono", Menlo, monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@utility bg-grad-lake {
+  background-image: linear-gradient(145deg, #0c6052 0%, #06322b 100%);
+}
+@utility bg-grad-dusk {
+  background-image: linear-gradient(145deg, #12806c 0%, #0a4d43 60%, #06322b 100%);
+}
+@utility bg-grad-mist {
+  background-image: linear-gradient(180deg, #fbfbf7 0%, #edf7f3 100%);
+}
+/* Striped placeholder texture used for photos/screenshots in the mockups */
+@utility bg-stripes-lake {
+  background-image: repeating-linear-gradient(135deg, var(--color-lake-50) 0 12px, var(--color-white) 12px 24px);
+}
+@utility bg-stripes-ink {
+  background-image: repeating-linear-gradient(135deg, var(--color-ink-50) 0 12px, var(--color-white) 12px 24px);
+}
+@utility bg-stripes-paper {
+  background-image: repeating-linear-gradient(135deg, var(--color-ink-50) 0 12px, var(--color-paper) 12px 24px);
+}
+@utility bg-stripes-dark {
+  background-image: repeating-linear-gradient(135deg, rgba(124, 201, 182, 0.06) 0 12px, transparent 12px 24px);
+}
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  [id] {
+    scroll-margin-top: 84px;
+  }
+  a {
+    color: var(--color-lake-700);
+    text-decoration: none;
+    transition: color 140ms ease;
+  }
+  a:hover {
+    color: var(--color-lake-600);
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-lake-400);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  ::selection {
+    background: var(--color-lake-200);
+    color: var(--color-ink-900);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0.01ms !important;
+      animation-duration: 0.01ms !important;
+    }
+  }
 }
