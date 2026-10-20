@@ -141,8 +141,8 @@ const en: Dictionary = {
     group: {
       eyebrow: "Who we are",
       title: { a: "Three integrated fronts.", em: "One", b: "value thesis." },
-      p1: "We believe technology is the main growth lever of any business. That is why Grupo Lake combines in-house software development with capital and strategic management.",
-      p2: "We act as partners: we build the product, structure the operation and follow every portfolio company with governance, clear goals and regular reporting.",
+      p1: "We believe technology is the main growth lever of any business. That is why Grupo Lake operates as the parent brand of an integrated ecosystem: combining in-house software development with capital, proprietary ventures and strategic management.",
+      p2: "We act as partners and builders: we engineer platforms like Lake Finance and Vocato Career, accelerate partner companies and follow every initiative with governance, clear goals and regular reporting.",
       software: {
         eyebrow: "01 — Core business",
         title: "Software house",
@@ -178,6 +178,13 @@ const en: Dictionary = {
         shot: "Screenshot — Lake Finance",
       },
       partners: [
+        {
+          key: "vocato",
+          badge: "Group venture",
+          name: "Vocato Career",
+          desc: "Vocational guidance and career intelligence platform based on the RIASEC model and O*NET occupational data.",
+          img: "Image — Vocato Career",
+        },
         {
           key: "tripSide",
           badge: "Partner",
@@ -278,7 +285,7 @@ const en: Dictionary = {
         },
         {
           q: "Which companies are in the portfolio?",
-          a: "The portfolio includes Lake Finance, an AI-powered personal financial advisor using Open Finance (in beta), and partners such as Trip Side, a reseller network with a B2B portal, and the Haze app, whose testing was led by the software house.",
+          a: "The Grupo Lake ecosystem includes proprietary ventures such as Lake Finance (an AI-powered personal financial advisor in beta) and Vocato Career (vocational intelligence with RIASEC and O*NET), alongside partners like Trip Side and the Haze app.",
         },
         {
           q: "How does Grupo Lake invest in and accelerate businesses?",

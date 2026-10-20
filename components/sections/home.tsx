@@ -146,7 +146,7 @@ export function HomeGroup({ lang, dict }: Props) {
 export function HomePortfolio({ dict }: Props) {
   const p = dict.home.portfolio;
   const lf = p.lakeFinance;
-  const partnerUrls = { tripSide: site.portfolio.tripSide, haze: site.portfolio.haze } as Record<string, string>;
+  const partnerUrls = { vocato: site.portfolio.vocato, tripSide: site.portfolio.tripSide, haze: site.portfolio.haze } as Record<string, string>;
   return (
     <section id="portfolio" aria-labelledby="portfolio-title" className={`bg-sunken px-6 ${sectionY}`}>
       <Container>
@@ -156,8 +156,8 @@ export function HomePortfolio({ dict }: Props) {
             {p.title}
           </Heading>
         </div>
-        <div className="mt-14 grid gap-5 md:grid-cols-2">
-          <article className="overflow-hidden rounded-xl bg-ink-900 px-[clamp(20px,4vw,48px)] pt-[clamp(40px,6vw,64px)] text-center text-on-dark md:col-span-2">
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          <article className="overflow-hidden rounded-xl bg-ink-900 px-[clamp(20px,4vw,48px)] pt-[clamp(40px,6vw,64px)] text-center text-on-dark md:col-span-2 lg:col-span-3">
             <div className="flex items-center justify-center gap-2.5">
               <LakeMark size={30} light />
               <span className="font-display text-[26px]">{lf.name}</span>

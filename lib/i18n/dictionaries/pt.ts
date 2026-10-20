@@ -144,8 +144,8 @@ const pt = {
     group: {
       eyebrow: "Quem somos",
       title: { a: "Três frentes integradas.", em: "Uma", b: "tese de valor." },
-      p1: "Acreditamos que a tecnologia é a principal alavanca de crescimento de um negócio. Por isso, o Grupo Lake combina capacidade própria de desenvolvimento de software com capital e gestão estratégica.",
-      p2: "Atuamos como sócios: construímos o produto, estruturamos a operação e acompanhamos cada empresa do portfólio com governança, metas claras e prestação de contas periódica.",
+      p1: "Acreditamos que a tecnologia é a principal alavanca de crescimento de um negócio. Por isso, o Grupo Lake atua como a marca-mãe de um ecossistema integrado: combinamos capacidade própria de desenvolvimento de software com capital, ventures proprietárias e gestão estratégica.",
+      p2: "Atuamos como sócios e construtores: concebemos plataformas como Lake Finance e Vocato Career, aceleramos empresas parceiras e acompanhamos cada iniciativa com governança, metas claras e prestação de contas periódica.",
       software: {
         eyebrow: "01 — Vertente principal",
         title: "Casa de software",
@@ -181,6 +181,13 @@ const pt = {
         shot: "Screenshot — Lake Finance",
       },
       partners: [
+        {
+          key: "vocato",
+          badge: "Negócio do grupo",
+          name: "Vocato Career",
+          desc: "Plataforma de inteligência e orientação vocacional baseada no modelo RIASEC e dados ocupacionais O*NET.",
+          img: "Imagem — Vocato Career",
+        },
         {
           key: "tripSide",
           badge: "Parceiro",
@@ -281,7 +288,7 @@ const pt = {
         },
         {
           q: "Quais empresas fazem parte do portfólio?",
-          a: "O portfólio inclui a Lake Finance, consultor financeiro pessoal com IA e Open Finance (em versão beta), e parceiros como a Trip Side, rede de revendedores com portal B2B, e o aplicativo Haze, cuja frente de testes foi conduzida pela casa de software.",
+          a: "O ecossistema do Grupo Lake inclui ventures proprietárias como a Lake Finance (consultor financeiro pessoal com IA e Open Finance em versão beta) e a Vocato Career (orientação e inteligência de carreiras com RIASEC e O*NET), além de parceiros como a Trip Side e o aplicativo Haze.",
         },
         {
           q: "Como o Grupo Lake investe e acelera negócios?",
