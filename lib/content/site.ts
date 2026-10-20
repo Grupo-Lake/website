@@ -29,6 +29,7 @@ export const site = {
   stats: { products: "00+", companies: "00", revenue: "R$ 0,0M", founded: "0000" },
   portfolio: {
     lakeFinance: "https://finance.grupolake.com.br/",
+    vocato: "https://vocatocareer.com.br",
     tripSide: "https://tripside.grupolake.com.br",
     haze: "https://www.instagram.com/hazeapp.oficial/",
   },
