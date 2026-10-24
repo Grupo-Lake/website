@@ -1,3 +1,5 @@
+import Image from "next/image";
+import type { SiteImage } from "@/lib/content/images";
 import { cn } from "./cn";
 
 /** Motivo "ripple" da marca: círculos concêntricos de baixa opacidade. */
@@ -39,18 +41,41 @@ const toneClasses: Record<PlaceholderTone, string> = {
 };
 
 /**
- * Espaço reservado para foto/screenshot (textura listrada do mockup).
- * Quando houver imagem real, substitua por next/image mantendo as mesmas dimensões.
+ * Foto/screenshot do site. Com `image`, renderiza next/image preenchendo o contêiner
+ * (o tamanho vem do className); sem ela, mostra o espaço reservado listrado.
  */
 export function Placeholder({
   label,
   tone = "lake",
   className,
+  image,
+  sizes = "(min-width: 1024px) 480px, 100vw",
+  priority,
+  objectPosition = "center",
 }: {
   label: string;
   tone?: PlaceholderTone;
   className?: string;
+  image?: SiteImage;
+  sizes?: string;
+  priority?: boolean;
+  objectPosition?: string;
 }) {
+  if (image) {
+    return (
+      <div className={cn("relative overflow-hidden border", toneClasses[tone], className)}>
+        <Image
+          src={image.src}
+          alt={label}
+          fill
+          sizes={sizes}
+          priority={priority}
+          className="object-cover"
+          style={{ objectPosition }}
+        />
+      </div>
+    );
+  }
   return (
     <div
       role="img"
