@@ -4,6 +4,7 @@ import { ButtonLink } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
 import { Icon } from "@/components/ui/Icon";
 import { Placeholder } from "@/components/ui/Decor";
+import { images } from "@/lib/content/images";
 import { Container, EmTitle, Eyebrow, Heading } from "@/components/ui/Typography";
 import { cn } from "@/components/ui/cn";
 import { JobsBoard } from "./JobsBoard";
@@ -36,6 +37,8 @@ export function CareersHero({ dict }: Props) {
           <Placeholder
             key={label}
             label={label}
+            image={images.careers[i]}
+            sizes="(min-width: 640px) 550px, 50vw"
             className={cn(
               "border-b-0",
               i === 0 ? "col-span-2 rounded-t-[20px] sm:col-span-1" : "rounded-[16px] sm:rounded-b-none sm:rounded-t-[20px]",

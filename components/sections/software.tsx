@@ -9,6 +9,7 @@ import { Ripple } from "@/components/ui/Decor";
 import { Container, EmTitle, Eyebrow, Heading } from "@/components/ui/Typography";
 import { BriefingForm } from "@/components/forms/Forms";
 import { formText } from "@/components/forms/formText";
+import { projectShots } from "@/lib/content/images";
 import { BrowserFrame } from "./home";
 
 type Props = { lang: Locale; dict: Dictionary };
@@ -125,7 +126,7 @@ export function SoftwareCases({ dict }: Props) {
           {c.items.map((item) => (
             <li key={item.key}>
               <article className="grid items-center gap-9 md:grid-cols-2">
-                <BrowserFrame domain={item.domain} label={item.img} className="shadow-sm" />
+                <BrowserFrame domain={item.domain} label={item.img} image={projectShots[item.key]} className="shadow-sm" />
                 <div>
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag) => (

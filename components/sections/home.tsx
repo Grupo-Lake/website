@@ -1,7 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/pt";
 import { site } from "@/lib/content/site";
+import { images, projectShots, type SiteImage } from "@/lib/content/images";
 import { href } from "@/lib/routes";
 import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
@@ -49,6 +51,9 @@ export function HomeHero({ lang, dict }: Props) {
       <Placeholder
         label={h.media}
         tone="dark"
+        image={images.hero}
+        sizes="(min-width: 880px) 880px, 100vw"
+        priority
         className="relative mx-auto mt-[clamp(56px,7vw,88px)] h-[clamp(200px,28vw,340px)] max-w-[880px] rounded-t-[24px] border-b-0"
       />
     </section>
@@ -181,6 +186,9 @@ export function HomePortfolio({ dict }: Props) {
             <Placeholder
               label={lf.shot}
               tone="dark"
+              image={images.lakeFinance}
+              sizes="(min-width: 820px) 820px, 100vw"
+              objectPosition="center 40%"
               className="mx-auto mt-12 h-[clamp(180px,26vw,300px)] max-w-[820px] rounded-t-[20px] border-b-0"
             />
           </article>
@@ -201,7 +209,14 @@ export function HomePortfolio({ dict }: Props) {
                 {p.partnerCta} <span className="sr-only">{partner.name} {dict.common.opensInNewTab}</span>
                 <Icon name="chevron-right" size={16} />
               </a>
-              <Placeholder label={partner.img} tone="ink" className="mt-9 h-[200px] self-stretch rounded-t-[16px] border-b-0" />
+              <Placeholder
+                label={partner.img}
+                tone="ink"
+                image={projectShots[partner.key]}
+                sizes="(min-width: 1024px) 380px, (min-width: 768px) 50vw, 100vw"
+                objectPosition="center top"
+                className="mt-9 h-[200px] self-stretch rounded-t-[16px] border-b-0"
+              />
             </article>
           ))}
         </div>
@@ -210,7 +225,17 @@ export function HomePortfolio({ dict }: Props) {
   );
 }
 
-export function BrowserFrame({ domain, label, className }: { domain: string; label: string; className?: string }) {
+export function BrowserFrame({
+  domain,
+  label,
+  className,
+  image,
+}: {
+  domain: string;
+  label: string;
+  className?: string;
+  image?: SiteImage;
+}) {
   return (
     <div
       className={`flex aspect-[16/10] flex-col overflow-hidden rounded-lg border border-subtle bg-stripes-paper ${className ?? "shadow-xs"}`}
@@ -221,9 +246,15 @@ export function BrowserFrame({ domain, label, className }: { domain: string; lab
         <span className="size-2 rounded-full bg-ink-200" />
         <span className="ml-2.5 truncate font-mono text-[11px] text-muted">{domain}</span>
       </div>
-      <div role="img" aria-label={label} className="flex flex-1 items-center justify-center font-mono text-[12px] uppercase tracking-[.1em] text-muted">
-        <span aria-hidden="true">{label}</span>
-      </div>
+      {image ? (
+        <div className="relative flex-1">
+          <Image src={image.src} alt={label} fill sizes="(min-width: 768px) 560px, 100vw" className="object-cover object-top" />
+        </div>
+      ) : (
+        <div role="img" aria-label={label} className="flex flex-1 items-center justify-center font-mono text-[12px] uppercase tracking-[.1em] text-muted">
+          <span aria-hidden="true">{label}</span>
+        </div>
+      )}
     </div>
   );
 }
@@ -249,7 +280,7 @@ export function HomeCases({ lang, dict }: Props) {
           {c.items.map((item) => (
             <li key={item.key}>
               <a href={urls[item.key]} target="_blank" rel="noopener" className="group block text-inherit hover:text-inherit">
-                <BrowserFrame domain={item.domain} label={c.shot} className="shadow-xs transition-shadow group-hover:shadow-md" />
+                <BrowserFrame domain={item.domain} label={`${item.name} — ${c.shot}`} image={projectShots[item.key]} className="shadow-xs transition-shadow group-hover:shadow-md" />
                 <div className="mt-[18px] flex flex-wrap items-baseline justify-between gap-3">
                   <h3 className="font-display text-[24px] text-strong group-hover:text-lake-700">{item.name}</h3>
                   <span className="font-mono text-[11.5px] uppercase tracking-[.06em] text-muted">{item.tag}</span>
@@ -271,7 +302,7 @@ export function HomeLeadership({ dict }: Props) {
     <section id="lideranca" aria-labelledby="lideranca-title" className="px-6">
       <Container className={`border-t border-subtle ${sectionY}`}>
         <div className="grid items-center gap-12 md:grid-cols-2">
-          <Placeholder label={l.portrait} tone="lake" className="aspect-[4/5] w-full max-w-[440px] rounded-xl" />
+          <Placeholder label={l.portrait} tone="lake" image={images.portrait} sizes="(min-width: 768px) 440px, 100vw" className="aspect-[4/5] w-full max-w-[440px] rounded-xl" />
           <figure>
             <Eyebrow as="h2" id="lideranca-title">
               {l.eyebrow}
@@ -342,10 +373,16 @@ export function HomePress({ dict }: Props) {
           </a>
         </div>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {p.items.map((n) => (
+          {p.items.map((n, i) => (
             <li key={n.t}>
               <Card className="h-full overflow-hidden">
-                <Placeholder label={p.image} tone="ink" className="aspect-video border-0 border-b" />
+                <Placeholder
+                  label={n.t}
+                  tone="ink"
+                  image={images.press[i]}
+                  sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
+                  className="aspect-video border-0 border-b"
+                />
                 <article className="px-6 pt-[22px] pb-[26px]">
                   <div className="flex items-center gap-2.5">
                     <Badge tone={n.tone} size="sm">
