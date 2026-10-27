@@ -48,6 +48,16 @@ const en: Dictionary = {
       description:
         "Terms and conditions for using the Grupo Lake corporate website: intellectual property, external links, responsibilities and governing law.",
     },
+    security: {
+      title: "Information security",
+      description:
+        "How Grupo Lake protects data and payments: encryption, access control, a certified payment provider and how to report vulnerabilities.",
+    },
+    refund: {
+      title: "Refund policy",
+      description:
+        "Grupo Lake cancellation rules, 7-day right of withdrawal and refunds, in line with Brazil's Consumer Protection Code.",
+    },
     notFound: {
       title: "Page not found",
       description: "The page you are looking for does not exist or has moved.",
@@ -83,8 +93,9 @@ const en: Dictionary = {
     software: { services: "Services", cases: "Projects", start: "Start a project" },
     press: "Press",
     privacy: "Privacy (LGPD)",
-    ethics: "Ethics hotline",
     terms: "Terms of use",
+    security: "Security",
+    refund: "Refunds",
     legalNav: "Legal links",
     social: "Social media",
   },
@@ -293,7 +304,7 @@ const en: Dictionary = {
         },
         {
           q: "How can I pitch a business or start a project?",
-          a: "Fill in the contact form on this page or write to contato@grupolake.com.br. The team replies within two business days with next steps.",
+          a: "Fill in the contact form on this page or write to jefferson.laurindo@grupolake.com.br. The team replies within two business days with next steps.",
         },
       ],
     },
@@ -576,49 +587,78 @@ const en: Dictionary = {
     privacy: {
       title: "Privacy policy",
       intro:
-        "This policy explains how Grupo Lake processes personal data collected through this website, in compliance with Brazil's General Data Protection Law (Law No. 13,709/2018 — LGPD).",
+        "This policy explains how Grupo Lake processes personal data collected through this website and the services it offers (including Vocato Career and software projects), in compliance with Brazil's General Data Protection Law (Law No. 13,709/2018 — LGPD).",
       sections: [
         {
           h: "1. Data controller",
           p: [
-            "The controller of personal data is Grupo Lake, headquartered in São Paulo, Brazil. Privacy questions and requests can be sent to our data protection officer at the email address at the end of this policy.",
+            "The controller of personal data is JEFFERSON L. DA SILVA, registered under CNPJ No. 57.924.952/0001-19, operating under the Grupo Lake brand, headquartered in São Paulo, Brazil.",
+            "The data protection officer (DPO) can be reached at jefferson.laurindo@grupolake.com.br.",
           ],
         },
         {
           h: "2. Data we collect",
           p: [
-            "Data you voluntarily send through our forms: name, email, company or institution, subject and message.",
-            "Technical data strictly necessary for the website to work, such as the language preference cookie. We do not use advertising cookies.",
+            "Data you voluntarily send through our forms and contact channels: name, email, phone (when provided), company or institution, subject and message.",
+            "Account and usage data for the services you sign up for, such as name, email and information you provide when using Vocato Career.",
+            "Payment data: payments are processed by a third-party payment provider. We do not store full card numbers or security codes; we only receive the transaction confirmation, payment method and the minimum data needed to issue receipts and prevent fraud.",
+            "Technical data strictly necessary for the website to work and stay secure, such as the language preference cookie, IP address and access logs. We do not use advertising cookies.",
           ],
         },
         {
           h: "3. How we use data",
           p: [
-            "To reply to business inquiries, project proposals, press requests and job applications; to send announcements to mailing list subscribers; and to comply with legal and regulatory obligations.",
+            "To reply to business inquiries, project proposals, press requests and job applications; to provide and bill for the services you purchase; to send announcements to mailing list subscribers; to prevent fraud and security incidents; and to comply with legal, tax and regulatory obligations.",
           ],
         },
         {
           h: "4. Legal bases",
           p: [
-            "We process data based on consent, pre-contractual steps requested by the data subject, legitimate interest and compliance with legal obligations, under Article 7 of the LGPD.",
+            "We process data based on consent, performance of a contract or pre-contractual steps requested by the data subject, legitimate interest, regular exercise of rights and compliance with legal or regulatory obligations, under Article 7 of the LGPD.",
           ],
         },
         {
           h: "5. Sharing",
           p: [
-            "Data may be shared with vendors that help us run the website and send emails, always under contract and only as needed. We do not sell personal data.",
+            "Data may be shared with vendors that help us run the website, process payments, host infrastructure and send emails, always under contract and only as needed. We may also share it with authorities when required by law.",
+            "We do not sell personal data.",
           ],
         },
         {
-          h: "6. Retention and security",
+          h: "6. International transfers",
           p: [
-            "We keep data for as long as needed for the purposes described or as required by law, with technical and administrative measures to protect it from unauthorized access.",
+            "Some vendors may store data on servers outside Brazil. In those cases the transfer follows the safeguards set out in Article 33 and following of the LGPD.",
           ],
         },
         {
-          h: "7. Your rights",
+          h: "7. Retention",
           p: [
-            "You may request confirmation of processing, access, correction, anonymization, portability, deletion, information about sharing and withdrawal of consent, under Article 18 of the LGPD.",
+            "We keep data for as long as needed for the purposes described or as required by law. Tax and transaction records are kept for the applicable legal periods. After that, data is deleted or anonymized.",
+          ],
+        },
+        {
+          h: "8. Security",
+          p: [
+            "We use technical and administrative measures to protect data from unauthorized access, loss and alteration. See our Information security page for details.",
+          ],
+        },
+        {
+          h: "9. Your rights",
+          p: [
+            "You may request confirmation of processing, access, correction, anonymization, blocking or deletion of unnecessary data, portability, information about sharing, information about the possibility of refusing consent and withdrawal of consent, under Article 18 of the LGPD.",
+            "We reply to requests within 15 days. You may also file a complaint with the Brazilian data protection authority (ANPD).",
+          ],
+        },
+        {
+          h: "10. Children and teenagers",
+          p: [
+            "Our services are not directed at people under 18 without the involvement of a legal guardian. If we find data from minors collected without that consent, it will be deleted.",
+          ],
+        },
+        {
+          h: "11. Changes to this policy",
+          p: [
+            "We may update this policy from time to time. The date of the latest update is shown at the top of this page.",
           ],
         },
       ],
@@ -626,40 +666,185 @@ const en: Dictionary = {
     },
     terms: {
       title: "Terms of use",
-      intro: "By accessing this website you agree to the terms below. If you do not agree, please do not use the website.",
+      intro:
+        "By accessing this website or purchasing our services you agree to the terms below. If you do not agree, please do not use the website or the services.",
       sections: [
         {
-          h: "1. Purpose of the website",
+          h: "1. Who we are",
+          p: [
+            "This website and the services are provided by JEFFERSON L. DA SILVA, CNPJ 57.924.952/0001-19, under the Grupo Lake brand, headquartered in São Paulo, Brazil. Contact: jefferson.laurindo@grupolake.com.br.",
+          ],
+        },
+        {
+          h: "2. Purpose of the website and services",
           p: [
             "This website presents corporate information about Grupo Lake, its software house, portfolio and career opportunities. The information is for reference only and does not constitute an offer or investment recommendation.",
+            "Through the website and group platforms we offer: (a) Vocato Career, a career guidance platform; and (b) contract software development services. Specific terms for each service are shown at the time of purchase.",
           ],
         },
         {
-          h: "2. Intellectual property",
+          h: "3. Registration and account",
           p: [
-            "Trademarks, logos, texts, images and other content belong to Grupo Lake or its licensors and may not be reproduced without prior authorization.",
+            "Some services require an account with accurate and up-to-date information. You are responsible for keeping your credentials confidential and for all activity under your account.",
           ],
         },
         {
-          h: "3. External links",
+          h: "4. Prices and payment",
+          p: [
+            "Prices are shown in Brazilian reais (BRL) before you confirm a purchase. Payments are processed by a third-party payment provider using the methods available at checkout. The purchase is only completed after payment is confirmed.",
+            "Software services are contracted through a specific proposal or contract with its own scope, timeline and payment terms.",
+          ],
+        },
+        {
+          h: "5. Cancellation and refunds",
+          p: [
+            "Cancellation, withdrawal and refund rules are described on the Refund policy page, which is part of these terms.",
+          ],
+        },
+        {
+          h: "6. Career guidance is informational",
+          p: [
+            "Vocato Career results are recommendations based on models and public data. They are for guidance only and do not guarantee professional outcomes, selection or hiring.",
+          ],
+        },
+        {
+          h: "7. Intellectual property",
+          p: [
+            "Trademarks, logos, texts, images, software and other content belong to Grupo Lake or its licensors and may not be reproduced without prior authorization.",
+          ],
+        },
+        {
+          h: "8. Acceptable use",
+          p: [
+            "You may not use the website or services for unlawful purposes, attempt to access restricted areas, compromise platform security or harm other users.",
+          ],
+        },
+        {
+          h: "9. External links",
           p: [
             "The website may link to portfolio companies, partners and clients. We are not responsible for the content or privacy practices of third-party websites.",
           ],
         },
         {
-          h: "4. Responsibilities",
+          h: "10. Responsibilities",
           p: [
-            "We strive to keep information accurate and up to date, but it may change without notice. Use of the website is at the user's own responsibility.",
+            "We strive to keep information accurate and services available, but there may be interruptions for maintenance or due to factors beyond our control. Nothing in these terms excludes rights guaranteed to consumers by law.",
           ],
         },
         {
-          h: "5. Governing law and venue",
+          h: "11. Privacy",
           p: [
-            "These terms are governed by Brazilian law. The courts of São Paulo, Brazil, have jurisdiction over any disputes.",
+            "Processing of personal data is governed by the Privacy policy.",
+          ],
+        },
+        {
+          h: "12. Governing law and venue",
+          p: [
+            "These terms are governed by Brazilian law. The courts of São Paulo, Brazil, have jurisdiction over any disputes, without prejudice to the consumer's right to choose the courts of their own domicile.",
           ],
         },
       ],
       contact: "Questions about these terms:",
+    },
+    security: {
+      title: "Information security",
+      intro:
+        "We take the protection of our customers' and users' data seriously. This page summarizes the practices we follow and how to report a security issue.",
+      sections: [
+        {
+          h: "1. Secure payments",
+          p: [
+            "Payments are processed by a third-party payment provider that follows industry standards, including PCI-DSS. Your full card details are entered directly in the provider's environment and never pass through our servers or get stored by us.",
+          ],
+        },
+        {
+          h: "2. Encryption in transit",
+          p: [
+            "All traffic between your browser and our websites is protected by HTTPS (TLS).",
+          ],
+        },
+        {
+          h: "3. Access control",
+          p: [
+            "Access to systems and data is limited to the minimum necessary, with authentication on administrative panels and periodic permission reviews.",
+          ],
+        },
+        {
+          h: "4. Infrastructure and vendors",
+          p: [
+            "We use well-known infrastructure and service providers, engaged under data protection terms compatible with the LGPD.",
+          ],
+        },
+        {
+          h: "5. Data minimization",
+          p: [
+            "We only collect the data needed to provide the service and do not use advertising cookies.",
+          ],
+        },
+        {
+          h: "6. Security incidents",
+          p: [
+            "If an incident may cause relevant risk or harm to data subjects, we will notify the ANPD and affected individuals as required by the LGPD.",
+          ],
+        },
+        {
+          h: "7. How to report a vulnerability",
+          p: [
+            "If you find a security flaw or suspect misuse of data, write to the email below with as much detail as possible. We will review reports with priority.",
+          ],
+        },
+      ],
+      contact: "Report security issues to",
+    },
+    refund: {
+      title: "Refund policy",
+      intro:
+        "This policy describes the cancellation, withdrawal and refund rules for services offered by Grupo Lake, in line with Brazil's Consumer Protection Code (Law No. 8,078/1990).",
+      sections: [
+        {
+          h: "1. Right of withdrawal (7 days)",
+          p: [
+            "For purchases made online, you may withdraw within 7 (seven) calendar days of the purchase date or of access to the service, under Article 49 of the Consumer Protection Code, with a full refund of amounts paid.",
+          ],
+        },
+        {
+          h: "2. How to request",
+          p: [
+            "Send your request to the email shown at the end of this page with your name, the email used for the purchase and the reason (optional). We confirm receipt and review within 2 business days.",
+          ],
+        },
+        {
+          h: "3. Refund timing and method",
+          p: [
+            "Refunds are issued through the same payment method used for the purchase within 10 business days after approval. For credit card purchases, the reversal may appear on the next or following statement, depending on the card issuer's calendar.",
+          ],
+        },
+        {
+          h: "4. After the withdrawal period",
+          p: [
+            "After 7 days we review requests case by case, especially in case of service failure, duplicate charges or unavailability that prevents use. Services already fully delivered are not refundable.",
+          ],
+        },
+        {
+          h: "5. Incorrect or duplicate charges",
+          p: [
+            "Charges made by mistake or in duplicate are fully reversed after verification.",
+          ],
+        },
+        {
+          h: "6. Contract software services",
+          p: [
+            "Development projects are governed by the cancellation and payment terms in the proposal or contract signed with the client. Stages already delivered and approved are owed proportionally.",
+          ],
+        },
+        {
+          h: "7. Cancellation",
+          p: [
+            "You may request cancellation at any time at the email below. Unless stated otherwise at purchase, cancellation stops future charges and access remains until the end of the period already paid.",
+          ],
+        },
+      ],
+      contact: "To request cancellation or a refund, write to",
     },
   },
 

@@ -51,6 +51,16 @@ const pt = {
       description:
         "Termos e condições de uso do site institucional do Grupo Lake: propriedade intelectual, links externos, responsabilidades e legislação aplicável.",
     },
+    security: {
+      title: "Segurança da informação",
+      description:
+        "Como o Grupo Lake protege dados e pagamentos: criptografia, controle de acesso, provedor de pagamentos certificado e como reportar vulnerabilidades.",
+    },
+    refund: {
+      title: "Política de reembolso",
+      description:
+        "Regras de cancelamento, direito de arrependimento de 7 dias e reembolso dos serviços do Grupo Lake, conforme o Código de Defesa do Consumidor.",
+    },
     notFound: {
       title: "Página não encontrada",
       description: "A página que você procura não existe ou foi movida.",
@@ -86,8 +96,9 @@ const pt = {
     software: { services: "Serviços", cases: "Projetos", start: "Iniciar um projeto" },
     press: "Imprensa",
     privacy: "Privacidade (LGPD)",
-    ethics: "Canal de ética",
     terms: "Termos de uso",
+    security: "Segurança",
+    refund: "Reembolso",
     legalNav: "Links legais",
     social: "Redes sociais",
   },
@@ -296,7 +307,7 @@ const pt = {
         },
         {
           q: "Como apresentar um negócio ou iniciar um projeto?",
-          a: "Preencha o formulário de contato desta página ou escreva para contato@grupolake.com.br. O time retorna em até dois dias úteis com os próximos passos.",
+          a: "Preencha o formulário de contato desta página ou escreva para jefferson.laurindo@grupolake.com.br. O time retorna em até dois dias úteis com os próximos passos.",
         },
       ],
     },
@@ -579,49 +590,78 @@ const pt = {
     privacy: {
       title: "Política de privacidade",
       intro:
-        "Esta política explica como o Grupo Lake trata dados pessoais coletados por meio deste site, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).",
+        "Esta política explica como o Grupo Lake trata dados pessoais coletados por meio deste site e dos serviços que oferece (incluindo o Vocato Career e projetos de software), em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).",
       sections: [
         {
           h: "1. Quem é o controlador",
           p: [
-            "O controlador dos dados pessoais é o Grupo Lake, com sede em São Paulo, SP. Dúvidas e solicitações sobre privacidade podem ser enviadas ao encarregado pelo tratamento de dados pelo e-mail indicado ao final desta política.",
+            "O controlador dos dados pessoais é JEFFERSON L. DA SILVA, inscrito no CNPJ sob o nº 57.924.952/0001-19, que atua sob a marca Grupo Lake, com sede em São Paulo, SP.",
+            "O encarregado pelo tratamento de dados pessoais (DPO) pode ser contatado pelo e-mail jefferson.laurindo@grupolake.com.br.",
           ],
         },
         {
           h: "2. Quais dados coletamos",
           p: [
-            "Dados que você nos envia voluntariamente pelos formulários: nome, e-mail, empresa ou instituição, assunto e mensagem.",
-            "Dados técnicos estritamente necessários ao funcionamento do site, como o cookie de preferência de idioma. Não utilizamos cookies de publicidade.",
+            "Dados que você nos envia voluntariamente pelos formulários e canais de contato: nome, e-mail, telefone (quando informado), empresa ou instituição, assunto e mensagem.",
+            "Dados de cadastro e uso dos serviços contratados, como nome, e-mail e informações fornecidas por você ao utilizar o Vocato Career.",
+            "Dados de pagamento: o pagamento é processado por um provedor de pagamentos terceirizado. Não armazenamos números completos de cartão nem códigos de segurança; recebemos apenas a confirmação da transação, o meio de pagamento e dados mínimos necessários à emissão de recibos e à prevenção a fraudes.",
+            "Dados técnicos estritamente necessários ao funcionamento e à segurança do site, como o cookie de preferência de idioma, endereço IP e registros de acesso. Não utilizamos cookies de publicidade.",
           ],
         },
         {
           h: "3. Para que usamos os dados",
           p: [
-            "Responder a contatos comerciais, propostas de projeto, pedidos de imprensa e candidaturas; enviar comunicados a quem se cadastrou no mailing; e cumprir obrigações legais e regulatórias.",
+            "Responder a contatos comerciais, propostas de projeto, pedidos de imprensa e candidaturas; prestar e cobrar os serviços contratados; enviar comunicados a quem se cadastrou no mailing; prevenir fraudes e incidentes de segurança; e cumprir obrigações legais, fiscais e regulatórias.",
           ],
         },
         {
           h: "4. Bases legais",
           p: [
-            "Tratamos dados com base no consentimento, na execução de procedimentos preliminares a contrato a pedido do titular, no legítimo interesse e no cumprimento de obrigação legal, conforme o art. 7º da LGPD.",
+            "Tratamos dados com base no consentimento, na execução de contrato ou de procedimentos preliminares a pedido do titular, no legítimo interesse, no exercício regular de direitos e no cumprimento de obrigação legal ou regulatória, conforme o art. 7º da LGPD.",
           ],
         },
         {
           h: "5. Compartilhamento",
           p: [
-            "Os dados podem ser compartilhados com fornecedores que nos ajudam a operar o site e a enviar e-mails, sempre sob contrato e apenas na medida necessária. Não vendemos dados pessoais.",
+            "Os dados podem ser compartilhados com fornecedores que nos ajudam a operar o site, processar pagamentos, hospedar a infraestrutura e enviar e-mails, sempre sob contrato e apenas na medida necessária. Também podemos compartilhá-los com autoridades quando exigido por lei.",
+            "Não vendemos dados pessoais.",
           ],
         },
         {
-          h: "6. Retenção e segurança",
+          h: "6. Transferência internacional",
           p: [
-            "Mantemos os dados pelo tempo necessário às finalidades descritas ou exigido por lei, adotando medidas técnicas e administrativas para protegê-los contra acessos não autorizados.",
+            "Alguns fornecedores podem armazenar dados em servidores fora do Brasil. Nesses casos, a transferência ocorre com as garantias previstas nos arts. 33 e seguintes da LGPD.",
           ],
         },
         {
-          h: "7. Seus direitos",
+          h: "7. Retenção",
           p: [
-            "Você pode solicitar confirmação de tratamento, acesso, correção, anonimização, portabilidade, eliminação, informação sobre compartilhamento e revogação do consentimento, nos termos do art. 18 da LGPD.",
+            "Mantemos os dados pelo tempo necessário às finalidades descritas ou exigido por lei. Registros fiscais e de transações são guardados pelos prazos legais aplicáveis. Após esse período, os dados são eliminados ou anonimizados.",
+          ],
+        },
+        {
+          h: "8. Segurança",
+          p: [
+            "Adotamos medidas técnicas e administrativas para proteger os dados contra acessos não autorizados, perda e alteração. Veja mais detalhes na nossa página de Segurança da informação.",
+          ],
+        },
+        {
+          h: "9. Seus direitos",
+          p: [
+            "Você pode solicitar confirmação de tratamento, acesso, correção, anonimização, bloqueio ou eliminação de dados desnecessários, portabilidade, informação sobre compartilhamento, informação sobre a possibilidade de não consentir e revogação do consentimento, nos termos do art. 18 da LGPD.",
+            "Respondemos às solicitações em até 15 dias. Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD).",
+          ],
+        },
+        {
+          h: "10. Crianças e adolescentes",
+          p: [
+            "Nossos serviços não são direcionados a menores de 18 anos sem a participação de um responsável legal. Se identificarmos dados de menores coletados sem esse consentimento, eles serão eliminados.",
+          ],
+        },
+        {
+          h: "11. Alterações desta política",
+          p: [
+            "Podemos atualizar esta política periodicamente. A data da última atualização está indicada no topo desta página.",
           ],
         },
       ],
@@ -630,40 +670,184 @@ const pt = {
     terms: {
       title: "Termos de uso",
       intro:
-        "Ao acessar este site, você concorda com os termos abaixo. Se não concordar, recomendamos não utilizar o site.",
+        "Ao acessar este site ou contratar nossos serviços, você concorda com os termos abaixo. Se não concordar, recomendamos não utilizar o site nem os serviços.",
       sections: [
         {
-          h: "1. Finalidade do site",
+          h: "1. Quem somos",
           p: [
-            "Este site apresenta informações institucionais sobre o Grupo Lake, sua casa de software, portfólio e oportunidades de carreira. As informações têm caráter informativo e não constituem oferta ou recomendação de investimento.",
+            "Este site e os serviços são oferecidos por JEFFERSON L. DA SILVA, CNPJ 57.924.952/0001-19, sob a marca Grupo Lake, com sede em São Paulo, SP. Contato: jefferson.laurindo@grupolake.com.br.",
           ],
         },
         {
-          h: "2. Propriedade intelectual",
+          h: "2. Finalidade do site e dos serviços",
           p: [
-            "Marcas, logotipos, textos, imagens e demais conteúdos pertencem ao Grupo Lake ou a seus licenciantes e não podem ser reproduzidos sem autorização prévia.",
+            "O site apresenta informações institucionais sobre o Grupo Lake, sua casa de software, portfólio e oportunidades de carreira. As informações têm caráter informativo e não constituem oferta ou recomendação de investimento.",
+            "Por meio do site e de plataformas do grupo, oferecemos: (a) o Vocato Career, plataforma de orientação de carreira; e (b) serviços de desenvolvimento de software sob contrato. As condições específicas de cada serviço são apresentadas no momento da contratação.",
           ],
         },
         {
-          h: "3. Links externos",
+          h: "3. Cadastro e conta",
+          p: [
+            "Para usar alguns serviços é necessário criar uma conta com informações verdadeiras e atualizadas. Você é responsável por manter a confidencialidade das suas credenciais e por toda atividade realizada na sua conta.",
+          ],
+        },
+        {
+          h: "4. Preços e pagamento",
+          p: [
+            "Os preços são informados em reais (BRL) antes da confirmação da compra. Os pagamentos são processados por provedor de pagamentos terceirizado, por meio dos meios disponíveis no momento da compra. A contratação só é concluída após a confirmação do pagamento.",
+            "Serviços de software são contratados por proposta ou contrato específico, com prazos, escopo e formas de pagamento próprios.",
+          ],
+        },
+        {
+          h: "5. Cancelamento e reembolso",
+          p: [
+            "As regras de cancelamento, arrependimento e reembolso estão descritas na página Política de reembolso, que integra estes termos.",
+          ],
+        },
+        {
+          h: "6. Natureza informativa da orientação de carreira",
+          p: [
+            "Os resultados do Vocato Career são recomendações baseadas em modelos e dados públicos. Têm caráter orientativo e não garantem resultados profissionais, aprovação em seleções ou contratação.",
+          ],
+        },
+        {
+          h: "7. Propriedade intelectual",
+          p: [
+            "Marcas, logotipos, textos, imagens, software e demais conteúdos pertencem ao Grupo Lake ou a seus licenciantes e não podem ser reproduzidos sem autorização prévia.",
+          ],
+        },
+        {
+          h: "8. Uso adequado",
+          p: [
+            "É proibido usar o site ou os serviços para fins ilícitos, tentar acessar áreas restritas, comprometer a segurança da plataforma ou prejudicar outros usuários.",
+          ],
+        },
+        {
+          h: "9. Links externos",
           p: [
             "O site pode conter links para sites de empresas do portfólio, parceiros e clientes. Não nos responsabilizamos pelo conteúdo ou pelas práticas de privacidade de sites de terceiros.",
           ],
         },
         {
-          h: "4. Responsabilidades",
+          h: "10. Responsabilidades",
           p: [
-            "Buscamos manter as informações corretas e atualizadas, mas elas podem ser alteradas sem aviso prévio. O uso do site é de responsabilidade do usuário.",
+            "Buscamos manter as informações corretas e atualizadas e os serviços disponíveis, mas pode haver interrupções para manutenção ou por fatores fora do nosso controle. Nada nestes termos exclui direitos garantidos ao consumidor pela legislação.",
           ],
         },
         {
-          h: "5. Legislação e foro",
+          h: "11. Privacidade",
           p: [
-            "Estes termos são regidos pela legislação brasileira. Fica eleito o foro da comarca de São Paulo, SP, para dirimir eventuais controvérsias.",
+            "O tratamento de dados pessoais é regido pela Política de privacidade.",
+          ],
+        },
+        {
+          h: "12. Legislação e foro",
+          p: [
+            "Estes termos são regidos pela legislação brasileira. Fica eleito o foro da comarca de São Paulo, SP, para dirimir eventuais controvérsias, ressalvado o direito do consumidor de optar pelo foro de seu domicílio.",
           ],
         },
       ],
       contact: "Dúvidas sobre estes termos:",
+    },
+    security: {
+      title: "Segurança da informação",
+      intro:
+        "Levamos a proteção dos dados dos nossos clientes e usuários a sério. Esta página resume as práticas que adotamos e como reportar um problema de segurança.",
+      sections: [
+        {
+          h: "1. Pagamentos seguros",
+          p: [
+            "Os pagamentos são processados por um provedor de pagamentos terceirizado, que segue os padrões do setor, incluindo o PCI-DSS. Os dados completos do seu cartão são informados diretamente no ambiente do provedor e não passam pelos nossos servidores nem são armazenados por nós.",
+          ],
+        },
+        {
+          h: "2. Criptografia em trânsito",
+          p: [
+            "Todo o tráfego entre o seu navegador e nossos sites é protegido por HTTPS (TLS).",
+          ],
+        },
+        {
+          h: "3. Controle de acesso",
+          p: [
+            "O acesso a sistemas e dados é restrito ao mínimo necessário, com autenticação nos painéis administrativos e revisão periódica de permissões.",
+          ],
+        },
+        {
+          h: "4. Infraestrutura e fornecedores",
+          p: [
+            "Utilizamos provedores de infraestrutura e serviços reconhecidos, contratados sob condições de proteção de dados compatíveis com a LGPD.",
+          ],
+        },
+        {
+          h: "5. Minimização de dados",
+          p: [
+            "Coletamos apenas os dados necessários para prestar o serviço e não utilizamos cookies de publicidade.",
+          ],
+        },
+        {
+          h: "6. Incidentes de segurança",
+          p: [
+            "Em caso de incidente que possa acarretar risco ou dano relevante aos titulares, comunicaremos a ANPD e os titulares afetados nos termos da LGPD.",
+          ],
+        },
+        {
+          h: "7. Como reportar uma vulnerabilidade",
+          p: [
+            "Se você identificar uma falha de segurança ou suspeitar de uso indevido de dados, escreva para o e-mail abaixo com o maior número de detalhes possível. Analisaremos o relato com prioridade.",
+          ],
+        },
+      ],
+      contact: "Reporte problemas de segurança para",
+    },
+    refund: {
+      title: "Política de reembolso",
+      intro:
+        "Esta política descreve as regras de cancelamento, arrependimento e reembolso dos serviços oferecidos pelo Grupo Lake, em conformidade com o Código de Defesa do Consumidor (Lei nº 8.078/1990).",
+      sections: [
+        {
+          h: "1. Direito de arrependimento (7 dias)",
+          p: [
+            "Nas compras feitas pela internet, você pode desistir da contratação em até 7 (sete) dias corridos a contar da data da compra ou do acesso ao serviço, nos termos do art. 49 do Código de Defesa do Consumidor, com reembolso integral dos valores pagos.",
+          ],
+        },
+        {
+          h: "2. Como solicitar",
+          p: [
+            "Envie a solicitação para o e-mail indicado ao final desta página, informando o nome, o e-mail usado na compra e o motivo (opcional). Confirmaremos o recebimento e a análise em até 2 dias úteis.",
+          ],
+        },
+        {
+          h: "3. Prazo e forma do reembolso",
+          p: [
+            "O reembolso é feito pelo mesmo meio de pagamento utilizado na compra, em até 10 dias úteis após a aprovação. Em compras no cartão de crédito, o estorno pode aparecer na fatura seguinte ou na subsequente, conforme o calendário da operadora.",
+          ],
+        },
+        {
+          h: "4. Após o prazo de arrependimento",
+          p: [
+            "Passados os 7 dias, avaliamos pedidos caso a caso, em especial quando houver falha no serviço, cobrança em duplicidade ou indisponibilidade que impeça o uso. Serviços já integralmente prestados não são reembolsáveis.",
+          ],
+        },
+        {
+          h: "5. Cobrança indevida ou em duplicidade",
+          p: [
+            "Cobranças realizadas por engano ou em duplicidade são estornadas integralmente após a verificação.",
+          ],
+        },
+        {
+          h: "6. Serviços de software sob contrato",
+          p: [
+            "Projetos de desenvolvimento são regidos pelas condições de cancelamento e pagamento previstas na proposta ou no contrato firmado com o cliente. Etapas já executadas e aprovadas são devidas proporcionalmente.",
+          ],
+        },
+        {
+          h: "7. Cancelamento",
+          p: [
+            "Você pode solicitar o cancelamento a qualquer momento pelo e-mail indicado abaixo. Salvo disposição em contrário no momento da compra, o cancelamento impede novas cobranças e o acesso permanece até o fim do período já pago.",
+          ],
+        },
+      ],
+      contact: "Para solicitar cancelamento ou reembolso, escreva para",
     },
   },
 

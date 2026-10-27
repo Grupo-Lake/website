@@ -65,7 +65,6 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           </Column>
           <Column title={f.contactTitle}>
             <li><a className={`${linkCls} break-all`} href={`mailto:${site.emails.contact}`}>{site.emails.contact}</a></li>
-            <li><a className={`${linkCls} break-all`} href={`mailto:${site.emails.press}`}>{site.emails.press}</a></li>
             <li><Link className={linkCls} href={href(lang, "home", "imprensa")}>{f.press}</Link></li>
           </Column>
         </div>
@@ -77,8 +76,9 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           <nav aria-label={f.legalNav}>
             <ul className="flex flex-wrap gap-x-5 gap-y-2">
               <li><Link className={linkCls} href={href(lang, "privacy")}>{f.privacy}</Link></li>
-              <li><a className={linkCls} href={`mailto:${site.emails.ethics}`}>{f.ethics}</a></li>
               <li><Link className={linkCls} href={href(lang, "terms")}>{f.terms}</Link></li>
+              <li><Link className={linkCls} href={href(lang, "security")}>{f.security}</Link></li>
+              <li><Link className={linkCls} href={href(lang, "refund")}>{f.refund}</Link></li>
             </ul>
           </nav>
         </div>

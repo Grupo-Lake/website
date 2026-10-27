@@ -10,6 +10,8 @@ const indexed: { route: RouteKey; priority: number; changeFrequency: "weekly" | 
   { route: "careers", priority: 0.8, changeFrequency: "weekly" },
   { route: "privacy", priority: 0.3, changeFrequency: "yearly" },
   { route: "terms", priority: 0.3, changeFrequency: "yearly" },
+  { route: "security", priority: 0.3, changeFrequency: "yearly" },
+  { route: "refund", priority: 0.3, changeFrequency: "yearly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
