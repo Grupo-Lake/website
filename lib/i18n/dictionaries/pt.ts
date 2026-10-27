@@ -61,9 +61,32 @@ const pt = {
       description:
         "Regras de cancelamento, direito de arrependimento de 7 dias e reembolso dos serviços do Grupo Lake, conforme o Código de Defesa do Consumidor.",
     },
+    blog: {
+      title: "Blog e notícias",
+      description:
+        "Notícias do Grupo Lake e artigos sobre software, finanças pessoais, Open Finance, IA aplicada e proteção de dados (LGPD), escritos pelo time.",
+    },
     notFound: {
       title: "Página não encontrada",
       description: "A página que você procura não existe ou foi movida.",
+    },
+  },
+
+  blog: {
+    eyebrow: "Blog e notícias",
+    title: "Notícias e artigos do grupo.",
+    lead: "Novidades das empresas do Grupo Lake e conteúdo sobre software, finanças pessoais, Open Finance, IA aplicada e proteção de dados.",
+    listLabel: "Publicações",
+    readMore: "Ler artigo",
+    back: "Voltar ao blog",
+    minutes: "min de leitura",
+    by: "Por",
+    published: "Publicado em",
+    kinds: { news: "Notícia", article: "Artigo" },
+    categories: { product: "Produto", education: "Educação", software: "Software", group: "Grupo" },
+    cta: {
+      title: "Quer conversar sobre software, investimento ou parceria?",
+      button: "Fale com o grupo",
     },
   },
 

@@ -1,4 +1,5 @@
 import {
+  ArrowLeft,
   ArrowRight,
   ArrowUpRight,
   CalendarHeart,
@@ -36,6 +37,7 @@ import {
 } from "lucide-react";
 
 const icons = {
+  "arrow-left": ArrowLeft,
   "arrow-right": ArrowRight,
   "arrow-up-right": ArrowUpRight,
   "calendar-heart": CalendarHeart,
