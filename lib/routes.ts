@@ -8,6 +8,8 @@ export const routes = {
   ri: "/investidores",
   privacy: "/privacidade",
   terms: "/termos",
+  security: "/seguranca",
+  refund: "/reembolso",
 } as const;
 
 export type RouteKey = keyof typeof routes;

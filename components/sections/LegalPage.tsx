@@ -14,7 +14,7 @@ export function LegalPage({
 }: {
   lang: Locale;
   dict: Dictionary;
-  doc: Dictionary["legal"]["privacy"] | Dictionary["legal"]["terms"];
+  doc: Dictionary["legal"]["privacy"];
   email: string;
 }) {
   const updated = new Date(`${site.lastModified}T12:00:00`).toLocaleDateString(lang === "pt" ? "pt-BR" : "en-US", {
