@@ -65,6 +65,7 @@ export function Footer({ lang, dict }: { lang: Locale; dict: Dictionary }) {
           </Column>
           <Column title={f.contactTitle}>
             <li><a className={`${linkCls} break-all`} href={`mailto:${site.emails.contact}`}>{site.emails.contact}</a></li>
+            <li><Link className={linkCls} href={href(lang, "blog")}>{f.blog}</Link></li>
             <li><Link className={linkCls} href={href(lang, "home", "imprensa")}>{f.press}</Link></li>
           </Column>
         </div>

@@ -10,7 +10,7 @@ const img = (name: string, width: number, height: number): SiteImage => ({
 export const images = {
   hero: img("hero", 1760, 680),
   portrait: img("portrait", 880, 1100),
-  lakeFinance: img("lakia", 1440, 900),
+  lakeFinance: img("lake-finance", 1440, 900),
   partners: {
     vocato: img("vocato-career", 1440, 900),
     tripSide: img("trip-side", 1440, 900),

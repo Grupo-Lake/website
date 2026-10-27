@@ -4,6 +4,7 @@ import type { Locale } from "@/lib/i18n/config";
 import type { Dictionary } from "@/lib/i18n/dictionaries/pt";
 import { site } from "@/lib/content/site";
 import { images, projectShots, type SiteImage } from "@/lib/content/images";
+import { getNews } from "@/lib/content/posts";
 import { href } from "@/lib/routes";
 import { Badge } from "@/components/ui/Badge";
 import { ButtonLink } from "@/components/ui/Button";
@@ -12,6 +13,7 @@ import { Avatar } from "@/components/ui/Avatar";
 import { Icon } from "@/components/ui/Icon";
 import { LakeMark, Placeholder, Ripple } from "@/components/ui/Decor";
 import { Container, EmTitle, Eyebrow, Heading } from "@/components/ui/Typography";
+import { PostCard } from "./blog";
 import { ContactForm } from "@/components/forms/Forms";
 import { formText } from "@/components/forms/formText";
 
@@ -356,7 +358,7 @@ export function HomeGovernance({ dict }: Props) {
   );
 }
 
-export function HomePress({ dict }: Props) {
+export function HomePress({ lang, dict }: Props) {
   const p = dict.home.press;
   return (
     <section id="imprensa" aria-labelledby="imprensa-title" className={`px-6 ${sectionY}`}>
@@ -368,31 +370,19 @@ export function HomePress({ dict }: Props) {
               {p.title}
             </Heading>
           </div>
-          <a href={`mailto:${site.emails.press}`} className="inline-flex min-h-11 items-center gap-1.5 font-semibold">
-            {p.kit} <Icon name="arrow-right" size={16} />
-          </a>
+          <div className="flex flex-wrap items-center gap-x-6">
+            <Link href={href(lang, "blog")} className="inline-flex min-h-11 items-center gap-1.5 font-semibold">
+              {p.all} <Icon name="arrow-right" size={16} />
+            </Link>
+            <a href={`mailto:${site.emails.press}`} className="inline-flex min-h-11 items-center gap-1.5 font-semibold">
+              {p.kit} <Icon name="arrow-right" size={16} />
+            </a>
+          </div>
         </div>
         <ul className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {p.items.map((n, i) => (
-            <li key={n.t}>
-              <Card className="h-full overflow-hidden">
-                <Placeholder
-                  label={n.t}
-                  tone="ink"
-                  image={images.press[i]}
-                  sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
-                  className="aspect-video border-0 border-b"
-                />
-                <article className="px-6 pt-[22px] pb-[26px]">
-                  <div className="flex items-center gap-2.5">
-                    <Badge tone={n.tone} size="sm">
-                      {n.cat}
-                    </Badge>
-                    <span className="font-mono text-[12px] text-muted">{n.date}</span>
-                  </div>
-                  <h3 className="mt-3.5 font-display text-[22px] leading-[1.25] text-pretty text-strong">{n.t}</h3>
-                </article>
-              </Card>
+          {getNews().map((post) => (
+            <li key={post.slug}>
+              <PostCard lang={lang} dict={dict} post={post} />
             </li>
           ))}
         </ul>

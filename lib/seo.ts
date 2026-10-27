@@ -13,14 +13,18 @@ type BuildMetadataInput = {
   /** Usa o título sem o template "· Grupo Lake" (Home). */
   absoluteTitle?: boolean;
   noindex?: boolean;
+  /** Sufixo após a rota (ex.: "/meu-post"), igual em todos os idiomas. */
+  subpath?: string;
+  ogType?: "website" | "article";
 };
 
-export const localizedUrl = (lang: Locale, route: RouteKey) => absoluteUrl(`/${lang}${routes[route]}`);
+export const localizedUrl = (lang: Locale, route: RouteKey, subpath = "") =>
+  absoluteUrl(`/${lang}${routes[route]}${subpath}`);
 
-export function languageAlternates(route: RouteKey) {
+export function languageAlternates(route: RouteKey, subpath = "") {
   const languages: Record<string, string> = {};
-  for (const l of locales) languages[htmlLang[l]] = `/${l}${routes[route]}`;
-  languages["x-default"] = `/pt${routes[route]}`;
+  for (const l of locales) languages[htmlLang[l]] = `/${l}${routes[route]}${subpath}`;
+  languages["x-default"] = `/pt${routes[route]}${subpath}`;
   return languages;
 }
 
@@ -32,15 +36,17 @@ export function buildMetadata({
   dict,
   absoluteTitle,
   noindex,
+  subpath,
+  ogType = "website",
 }: BuildMetadataInput): Metadata {
-  const path = `/${lang}${routes[route]}`;
+  const path = `/${lang}${routes[route]}${subpath ?? ""}`;
   return {
     title: absoluteTitle ? { absolute: title } : title,
     description,
     keywords: dict.meta.keywords,
-    alternates: { canonical: path, languages: languageAlternates(route) },
+    alternates: { canonical: path, languages: languageAlternates(route, subpath) },
     openGraph: {
-      type: "website",
+      type: ogType,
       siteName: site.name,
       locale: ogLocale[lang],
       alternateLocale: locales.filter((l) => l !== lang).map((l) => ogLocale[l]),
@@ -148,8 +154,15 @@ export function webPageJsonLd({
   };
 }
 
-export function breadcrumbJsonLd(lang: Locale, dict: Dictionary, items: { route: RouteKey; name: string }[]) {
-  const all = [{ route: "home" as RouteKey, name: dict.nav.breadcrumbHome }, ...items];
+export function breadcrumbJsonLd(
+  lang: Locale,
+  dict: Dictionary,
+  items: { route: RouteKey; name: string; subpath?: string }[],
+) {
+  const all: { route: RouteKey; name: string; subpath?: string }[] = [
+    { route: "home", name: dict.nav.breadcrumbHome },
+    ...items,
+  ];
   return {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -157,8 +170,41 @@ export function breadcrumbJsonLd(lang: Locale, dict: Dictionary, items: { route:
       "@type": "ListItem",
       position: i + 1,
       name: item.name,
-      item: localizedUrl(lang, item.route),
+      item: localizedUrl(lang, item.route, item.subpath),
     })),
+  };
+}
+
+export function blogPostingJsonLd({
+  lang,
+  slug,
+  headline,
+  description,
+  date,
+  image,
+}: {
+  lang: Locale;
+  slug: string;
+  headline: string;
+  description: string;
+  date: string;
+  image: string;
+}) {
+  const url = localizedUrl(lang, "blog", `/${slug}`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    mainEntityOfPage: url,
+    headline,
+    description,
+    datePublished: date,
+    dateModified: date,
+    inLanguage: htmlLang[lang],
+    image: absoluteUrl(image),
+    author: { "@type": "Person", name: site.founder.name },
+    publisher: { "@id": ORG_ID },
+    isPartOf: { "@id": WEBSITE_ID },
   };
 }
 

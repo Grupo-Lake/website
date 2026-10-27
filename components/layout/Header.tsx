@@ -25,7 +25,7 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dictionary["nav"] }) 
     { key: "software", href: href(lang, "software") },
     { key: "portfolio", href: href(lang, "home", "portfolio") },
     { key: "carreiras", href: href(lang, "careers") },
-    { key: "imprensa", href: href(lang, "home", "imprensa") },
+    { key: "blog", href: href(lang, "blog") },
   ];
 
   const sub = pathname.replace(/^\/(pt|en)/, "");
@@ -34,9 +34,11 @@ export function Header({ lang, nav }: { lang: Locale; nav: Dictionary["nav"] }) 
       ? "software"
       : sub === routes.careers
         ? "carreiras"
-        : sub === "" || sub === "/"
-          ? "grupo"
-          : null;
+        : sub.startsWith(routes.blog)
+          ? "blog"
+          : sub === "" || sub === "/"
+            ? "grupo"
+            : null;
 
   // Fecha o menu ao navegar (ajuste de estado durante o render, sem efeito)
   const [lastPath, setLastPath] = useState(pathname);

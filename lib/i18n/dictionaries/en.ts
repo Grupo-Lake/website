@@ -58,9 +58,32 @@ const en: Dictionary = {
       description:
         "Grupo Lake cancellation rules, 7-day right of withdrawal and refunds, in line with Brazil's Consumer Protection Code.",
     },
+    blog: {
+      title: "Blog and news",
+      description:
+        "News from Grupo Lake and articles on software, personal finance, Open Finance, applied AI and data protection (LGPD), written by the team.",
+    },
     notFound: {
       title: "Page not found",
       description: "The page you are looking for does not exist or has moved.",
+    },
+  },
+
+  blog: {
+    eyebrow: "Blog and news",
+    title: "Group news and articles.",
+    lead: "Updates from Grupo Lake companies and content on software, personal finance, Open Finance, applied AI and data protection.",
+    listLabel: "Posts",
+    readMore: "Read article",
+    back: "Back to the blog",
+    minutes: "min read",
+    by: "By",
+    published: "Published on",
+    kinds: { news: "News", article: "Article" },
+    categories: { product: "Product", education: "Education", software: "Software", group: "Group" },
+    cta: {
+      title: "Want to talk about software, investment or a partnership?",
+      button: "Talk to the group",
     },
   },
 
@@ -70,7 +93,7 @@ const en: Dictionary = {
       software: "Software house",
       portfolio: "Portfolio",
       carreiras: "Careers",
-      imprensa: "Press",
+      blog: "Blog",
     },
     contact: "Contact",
     talkToGroup: "Talk to the group",
@@ -91,6 +114,7 @@ const en: Dictionary = {
     contactTitle: "Contact",
     group: { about: "About us", leadership: "Leadership", portfolio: "Portfolio", careers: "Careers" },
     software: { services: "Services", cases: "Projects", start: "Start a project" },
+    blog: "Blog and news",
     press: "Press",
     privacy: "Privacy (LGPD)",
     terms: "Terms of use",
@@ -261,12 +285,7 @@ const en: Dictionary = {
       eyebrow: "Press",
       title: "Group news.",
       kit: "Press kit",
-      image: "Image",
-      items: [
-        { cat: "Portfolio", tone: "brand", date: "00 OCT 2026", t: "Lake Finance opens early access to its beta" },
-        { cat: "Software", tone: "info", date: "00 SEP 2026", t: "Software house delivers the CODEC Congress platform" },
-        { cat: "Group", tone: "neutral", date: "00 AUG 2026", t: "Group corporate news headline" },
-      ],
+      all: "See all posts",
     },
     careers: {
       eyebrow: "Careers",

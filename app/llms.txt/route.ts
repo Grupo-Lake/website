@@ -34,6 +34,7 @@ ${pt.home.cases.items.map((c) => `- ${c.name} (${c.domain}): ${c.desc}`).join("\
 - [Início](${url("pt", routes.home)}): visão geral do grupo, portfólio, governança e contato
 - [Casa de software](${url("pt", routes.software)}): serviços, método em cinco etapas, projetos e briefing
 - [Carreiras](${url("pt", routes.careers)}): valores, benefícios, vagas e processo seletivo
+- [Blog e notícias](${url("pt", routes.blog)}): notícias do grupo e artigos sobre software, finanças pessoais, Open Finance, IA e LGPD
 - [Home (English)](${url("en", routes.home)})
 - [Software house (English)](${url("en", routes.software)})
 - [Careers (English)](${url("en", routes.careers)})

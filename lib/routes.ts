@@ -5,6 +5,7 @@ export const routes = {
   home: "",
   software: "/casa-de-software",
   careers: "/carreiras",
+  blog: "/blog",
   ri: "/investidores",
   privacy: "/privacidade",
   terms: "/termos",
@@ -16,6 +17,8 @@ export type RouteKey = keyof typeof routes;
 
 export const href = (lang: Locale, route: RouteKey, hash?: string) =>
   `/${lang}${routes[route]}${hash ? `#${hash}` : ""}` || "/";
+
+export const postHref = (lang: Locale, slug: string) => `/${lang}${routes.blog}/${slug}`;
 
 /** Troca o prefixo de idioma de um pathname (/pt/carreiras → /en/carreiras). */
 export const switchLocalePath = (pathname: string, to: Locale) => {
