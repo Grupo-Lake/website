@@ -96,8 +96,8 @@ export function BlogArticle({ lang, dict, post }: Props & { post: Post }) {
           {copy.title}
         </Heading>
         <p className="mt-4 font-mono text-[12px] uppercase tracking-[.12em] text-muted">
-          {b.by} {site.founder.name} · {b.published}{" "}
-          <time dateTime={post.date}>{formatPostDate(post.date, lang)}</time> · {post.minutes} {b.minutes}
+          {b.by} {site.founder.name} · {b.published} <time dateTime={post.date}>{formatPostDate(post.date, lang)}</time>{" "}
+          · {post.minutes} {b.minutes}
         </p>
         <p data-speakable className="mt-8 text-[19px] leading-[1.65] text-pretty text-strong">
           {copy.excerpt}
@@ -116,6 +116,22 @@ export function BlogArticle({ lang, dict, post }: Props & { post: Post }) {
               <h2 key={i} className="mt-10 font-display text-[26px] leading-[1.2] text-strong">
                 {block.h2}
               </h2>
+            ) : "img" in block ? (
+              <figure key={i} className="mt-6">
+                <Placeholder
+                  label={block.alt}
+                  tone="ink"
+                  image={block.img}
+                  sizes="(min-width: 800px) 760px, 100vw"
+                  className="rounded-lg"
+                  style={{
+                    aspectRatio: `${block.img.width} / ${block.img.height}`,
+                  }}
+                />
+                {block.caption && (
+                  <figcaption className="mt-2.5 text-[14px] leading-[1.5] text-muted">{block.caption}</figcaption>
+                )}
+              </figure>
             ) : "ul" in block ? (
               <ul key={i} className="mt-4 list-disc space-y-2 pl-6 text-[17px] leading-[1.7] marker:text-lake-500">
                 {block.ul.map((li) => (
