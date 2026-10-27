@@ -14,7 +14,7 @@ import {
   HomeLeadership,
   HomePortfolio,
   HomePress,
-  HomeStats,
+  // HomeStats,
 } from "@/components/sections/home";
 
 export async function generateMetadata({ params }: PageProps<"/[lang]">): Promise<Metadata> {
@@ -40,7 +40,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   return (
     <>
       <HomeHero {...props} />
-      <HomeStats {...props} />
+      {/* <HomeStats {...props} /> */}
       <HomeGroup {...props} />
       <HomePortfolio {...props} />
       <HomeCases {...props} />
