@@ -287,12 +287,7 @@ const pt = {
       eyebrow: "Imprensa",
       title: "Notícias do grupo.",
       kit: "Kit de imprensa",
-      image: "Imagem",
-      items: [
-        { cat: "Portfólio", tone: "brand", date: "00 OUT 2026", t: "Lake Finance abre acesso antecipado à versão beta" },
-        { cat: "Software", tone: "info", date: "00 SET 2026", t: "Casa de software entrega plataforma do Congresso CODEC" },
-        { cat: "Grupo", tone: "neutral", date: "00 AGO 2026", t: "Título da notícia institucional do grupo" },
-      ],
+      all: "Ver todas as publicações",
     },
     careers: {
       eyebrow: "Carreiras",

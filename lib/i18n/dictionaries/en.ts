@@ -284,12 +284,7 @@ const en: Dictionary = {
       eyebrow: "Press",
       title: "Group news.",
       kit: "Press kit",
-      image: "Image",
-      items: [
-        { cat: "Portfolio", tone: "brand", date: "00 OCT 2026", t: "Lake Finance opens early access to its beta" },
-        { cat: "Software", tone: "info", date: "00 SEP 2026", t: "Software house delivers the CODEC Congress platform" },
-        { cat: "Group", tone: "neutral", date: "00 AUG 2026", t: "Group corporate news headline" },
-      ],
+      all: "See all posts",
     },
     careers: {
       eyebrow: "Careers",
