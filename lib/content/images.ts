@@ -20,6 +20,10 @@ export const images = {
     opam: img("opam-karate", 1440, 900),
     codec: img("codec", 1440, 900),
   },
+  posts: {
+    codecEvent: img("codec-evento", 1440, 890),
+    opamClass: img("opam-aulas", 1280, 960),
+  },
   press: [img("press-1", 1000, 563), img("press-2", 1000, 563), img("press-3", 1000, 563)],
   careers: [img("team", 900, 900), img("office", 700, 700), img("event", 700, 700)],
 } as const;

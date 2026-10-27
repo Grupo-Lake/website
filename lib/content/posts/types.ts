@@ -1,8 +1,9 @@
 import type { Locale } from "@/lib/i18n/config";
 import type { SiteImage } from "../images";
 
-/** Blocos de corpo do artigo: subtítulo, parágrafo ou lista. */
-export type Block = { h2: string } | { p: string } | { ul: string[] };
+/** Blocos de corpo do artigo: subtítulo, parágrafo, lista ou imagem (alt e legenda por idioma). */
+export type Block =
+  { h2: string } | { p: string } | { ul: string[] } | { img: SiteImage; alt: string; caption?: string };
 
 export type PostCopy = {
   title: string;

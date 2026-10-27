@@ -7,7 +7,7 @@ export const softwareHouseProjects: Post = {
   kind: "news",
   category: "software",
   tone: "info",
-  image: images.press[1],
+  image: images.cases.codec,
   minutes: 3,
   copy: {
     pt: {
@@ -22,9 +22,24 @@ export const softwareHouseProjects: Post = {
         {
           p: "O site do Congresso CODEC (congressocodec.com.br) reúne em um só lugar a programação, os palestrantes e as inscrições do evento. A ideia de uma plataforma de evento é simples: quem chega ao site deve entender em segundos quando e onde acontece, quem participa e como garantir a vaga.",
         },
+        {
+          img: images.posts.codecEvent,
+          alt: "Palestrantes e organizadores do 2º CODEC posando diante do banner do congresso",
+          caption: "2º CODEC, realizado em 05 e 08 de outubro de 2026, em Itaquera (SP).",
+        },
         { h2: "OPAM Karatê" },
         {
           p: "A Organização Paulista de Karatê (OPAM) ganhou uma presença digital própria em karateopam.com.br. O site institucional concentra os eventos, os filiados e a comunicação oficial da organização.",
+        },
+        {
+          img: images.cases.opam,
+          alt: "Página inicial do site da OPAM Karate com chamada para aula grátis",
+          caption: "Página inicial redesenhada do site da OPAM Karate.",
+        },
+        {
+          img: images.posts.opamClass,
+          alt: "Alunos de karatê reunidos em círculo durante o treino",
+          caption: "Treino da turma de Itaquera, que ilustra a página inicial do site.",
         },
         { h2: "Outros projetos ligados ao grupo" },
         {
@@ -48,9 +63,24 @@ export const softwareHouseProjects: Post = {
         {
           p: "The Congresso CODEC website (congressocodec.com.br) brings the event's schedule, speakers and registrations together in one place. The idea of an event platform is simple: whoever lands on the site should understand within seconds when and where it takes place, who is taking part and how to secure a spot.",
         },
+        {
+          img: images.posts.codecEvent,
+          alt: "Speakers and organizers of the 2nd CODEC posing in front of the congress banner",
+          caption: "2nd CODEC, held on October 5 and 8, 2026, in Itaquera (SP).",
+        },
         { h2: "OPAM Karatê" },
         {
           p: "The São Paulo Karate Organization (OPAM) now has its own digital presence at karateopam.com.br. The corporate site concentrates the organization's events, members and official communications.",
+        },
+        {
+          img: images.cases.opam,
+          alt: "OPAM Karate website home page with a free class call to action",
+          caption: "Redesigned home page of the OPAM Karate website.",
+        },
+        {
+          img: images.posts.opamClass,
+          alt: "Karate students gathered in a circle during training",
+          caption: "Training session of the Itaquera class, which illustrates the site's home page.",
         },
         { h2: "Other projects connected to the group" },
         {

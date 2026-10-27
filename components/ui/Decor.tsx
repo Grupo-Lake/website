@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import Image from "next/image";
 import type { SiteImage } from "@/lib/content/images";
 import { cn } from "./cn";
@@ -52,6 +53,7 @@ export function Placeholder({
   sizes = "(min-width: 1024px) 480px, 100vw",
   priority,
   objectPosition = "center",
+  style,
 }: {
   label: string;
   tone?: PlaceholderTone;
@@ -60,10 +62,11 @@ export function Placeholder({
   sizes?: string;
   priority?: boolean;
   objectPosition?: string;
+  style?: CSSProperties;
 }) {
   if (image) {
     return (
-      <div className={cn("relative overflow-hidden border", toneClasses[tone], className)}>
+      <div className={cn("relative overflow-hidden border", toneClasses[tone], className)} style={style}>
         <Image
           src={image.src}
           alt={label}
@@ -140,7 +143,9 @@ export function JsonLd({ data }: { data: object | object[] }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }
