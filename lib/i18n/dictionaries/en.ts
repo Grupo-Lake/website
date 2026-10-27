@@ -293,7 +293,7 @@ const en: Dictionary = {
         },
         {
           q: "How can I pitch a business or start a project?",
-          a: "Fill in the contact form on this page or write to contato@grupolake.com.br. The team replies within two business days with next steps.",
+          a: "Fill in the contact form on this page or write to jefferson.laurindo@grupolake.com.br. The team replies within two business days with next steps.",
         },
       ],
     },

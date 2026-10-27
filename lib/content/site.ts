@@ -2,23 +2,26 @@
  * Dados institucionais centralizados. Os valores marcados com "PLACEHOLDER"
  * vieram do mockup e devem ser substituídos pelos dados reais antes do lançamento.
  */
+const MAIN_EMAIL = "jefferson.laurindo@grupolake.com.br";
+
 export const site = {
   name: "Grupo Lake",
   shortName: "Lake",
   url: "https://grupolake.com.br",
   foundingYear: null as number | null, // PLACEHOLDER — ano de fundação
-  legalName: "Razão social a definir", // PLACEHOLDER
-  cnpj: "00.000.000/0001-00", // PLACEHOLDER
+  legalName: "JEFFERSON L. DA SILVA",
+  cnpj: "57.924.952/0001-19",
   city: "São Paulo",
   region: "SP",
   country: "BR",
+  /** Canal único por enquanto; separar por área quando houver caixas dedicadas. */
   emails: {
-    contact: "contato@grupolake.com.br",
-    ir: "ri@grupolake.com.br",
-    press: "imprensa@grupolake.com.br",
-    careers: "talentos@grupolake.com.br",
-    ethics: "etica@grupolake.com.br", // PLACEHOLDER — confirmar canal de ética
-    privacy: "privacidade@grupolake.com.br", // PLACEHOLDER — encarregado (DPO)
+    contact: MAIN_EMAIL,
+    ir: MAIN_EMAIL,
+    press: MAIN_EMAIL,
+    careers: MAIN_EMAIL,
+    ethics: MAIN_EMAIL,
+    privacy: MAIN_EMAIL, // encarregado (DPO)
   },
   social: {
     instagram: "https://www.instagram.com/grupolake/", // PLACEHOLDER — confirmar perfil
@@ -38,7 +41,7 @@ export const site = {
     codec: "https://www.congressocodec.com.br/",
   },
   /** Data de última revisão do conteúdo — usada no sitemap */
-  lastModified: "2026-10-06",
+  lastModified: "2026-10-27",
 } as const;
 
 export const absoluteUrl = (path = "/") => new URL(path, site.url).toString();

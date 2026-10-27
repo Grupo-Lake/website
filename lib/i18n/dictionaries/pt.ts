@@ -296,7 +296,7 @@ const pt = {
         },
         {
           q: "Como apresentar um negócio ou iniciar um projeto?",
-          a: "Preencha o formulário de contato desta página ou escreva para contato@grupolake.com.br. O time retorna em até dois dias úteis com os próximos passos.",
+          a: "Preencha o formulário de contato desta página ou escreva para jefferson.laurindo@grupolake.com.br. O time retorna em até dois dias úteis com os próximos passos.",
         },
       ],
     },
