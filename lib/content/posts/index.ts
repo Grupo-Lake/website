@@ -4,6 +4,7 @@ import { aiCostControl } from "./ai-cost-control";
 import { lakeFinanceBeta } from "./lake-finance-beta";
 import { legalPages } from "./legal-pages";
 import { lgpdDigitalProducts } from "./lgpd-digital-products";
+import { opamFirstAidCourse } from "./opam-first-aid-course";
 import { openFinanceExplained } from "./open-finance-explained";
 import { readOnlyFinanceApps } from "./read-only-finance-apps";
 import { softwareHouseProjects } from "./software-house-projects";
@@ -12,6 +13,7 @@ export type { Block, Post, PostCategory, PostCopy } from "./types";
 
 /** Mais recentes primeiro; a ordem do array desempata datas iguais. */
 export const posts: Post[] = [
+  opamFirstAidCourse,
   lakeFinanceBeta,
   legalPages,
   openFinanceExplained,

@@ -23,6 +23,7 @@ export const images = {
   posts: {
     codecEvent: img("codec-evento", 1440, 890),
     opamClass: img("opam-aulas", 1280, 960),
+    firstAidCourse: img("curso-primeiros-socorros", 800, 1067),
   },
   press: [img("press-1", 1000, 563), img("press-2", 1000, 563), img("press-3", 1000, 563)],
   careers: [img("team", 900, 900), img("office", 700, 700), img("event", 700, 700)],
