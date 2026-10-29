@@ -41,7 +41,7 @@ export const site = {
     codec: "https://www.congressocodec.com.br/",
   },
   /** Data de última revisão do conteúdo — usada no sitemap */
-  lastModified: "2026-10-27",
+  lastModified: "2026-10-29",
 } as const;
 
 export const absoluteUrl = (path = "/") => new URL(path, site.url).toString();
