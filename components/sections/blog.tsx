@@ -123,7 +123,7 @@ export function BlogArticle({ lang, dict, post }: Props & { post: Post }) {
                   tone="ink"
                   image={block.img}
                   sizes="(min-width: 800px) 760px, 100vw"
-                  className="rounded-lg"
+                  className={block.narrow ? "max-w-[420px] rounded-lg" : "rounded-lg"}
                   style={{
                     aspectRatio: `${block.img.width} / ${block.img.height}`,
                   }}
@@ -136,6 +136,28 @@ export function BlogArticle({ lang, dict, post }: Props & { post: Post }) {
               <ul key={i} className="mt-4 list-disc space-y-2 pl-6 text-[17px] leading-[1.7] marker:text-lake-500">
                 {block.ul.map((li) => (
                   <li key={li}>{li}</li>
+                ))}
+              </ul>
+            ) : "links" in block ? (
+              <ul key={i} className="mt-4 space-y-2 text-[17px] leading-[1.7]">
+                {block.links.map((link) => (
+                  <li key={link.href}>
+                    {link.external ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-lake-700 underline underline-offset-4"
+                      >
+                        {link.label}
+                        <span className="sr-only"> {dict.common.opensInNewTab}</span>
+                      </a>
+                    ) : (
+                      <Link href={link.href} className="font-semibold text-lake-700 underline underline-offset-4">
+                        {link.label}
+                      </Link>
+                    )}
+                  </li>
                 ))}
               </ul>
             ) : (

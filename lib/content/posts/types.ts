@@ -1,9 +1,22 @@
 import type { Locale } from "@/lib/i18n/config";
 import type { SiteImage } from "../images";
 
-/** Blocos de corpo do artigo: subtítulo, parágrafo, lista ou imagem (alt e legenda por idioma). */
+/** Link do corpo do artigo; `external` abre em nova aba (backlinks para outros sites). */
+export type BlockLink = { label: string; href: string; external?: boolean };
+
+/** Blocos de corpo do artigo: subtítulo, parágrafo, lista, links ou imagem (alt e legenda por idioma). */
 export type Block =
-  { h2: string } | { p: string } | { ul: string[] } | { img: SiteImage; alt: string; caption?: string };
+  | { h2: string }
+  | { p: string }
+  | { ul: string[] }
+  | { links: BlockLink[] }
+  | {
+      img: SiteImage;
+      alt: string;
+      caption?: string;
+      /** Limita a largura (arte vertical, como cartazes). */
+      narrow?: boolean;
+    };
 
 export type PostCopy = {
   title: string;
